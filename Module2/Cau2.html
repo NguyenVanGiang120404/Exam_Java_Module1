@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tongUocSo(n){
+            let sum = 0;
+            for(let i=1; i<=n/2; i++){
+                if(n % i ===0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+        function laCapSoThanThiet(a,b){
+            if(a<= 0 || b <= 0){
+                return false;
+            }
+            return tongUocSo(a) === b && tongUocSo(b) === a;
+        }
+        console.log(laCapSoThanThiet(220,284));
+        console.log(laCapSoThanThiet(123,456));
+        
+    </script>
+</body>
+</html>
